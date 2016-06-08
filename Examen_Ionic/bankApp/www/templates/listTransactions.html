@@ -1,0 +1,31 @@
+<ion-view title="List Transactions">
+    <ion-content padding="true" class="has-header">
+        <ion-list ng-init="listTransactionLoad();">
+          <ion-item ng-repeat="i in listTransaction">
+              <div class="row">
+                    <div class="col col-25"><h2>Type:</h2></div>
+                    <div class="col">{{i.type}}</div>
+                    <div class="col"><button class="button button-small button-positive" ng-click = "editTransactionsList({{i}});">
+                     Edit Transaction</button></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-25"><h2>Status:</h2></div>
+                    <div class="col">{{i.status}}</div>
+                    <div class="col"><button class="button button-small button-assertive" 
+                    ng-click="doDisable({{i.id}});">Active / Inactive</button></div>
+                </div>
+   
+                <div class="row">
+                    <div class="col col-25"><h2>Rode:</h2></div>
+                    <div class="col">{{i.rode}}</div>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-25"><h2>Date:</h2></div>
+                    <div class="col">{{i.date}}</div>
+                </div>
+          </ion-item>
+    </ion-list>
+    </ion-content>
+</ion-view>

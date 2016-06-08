@@ -1,0 +1,42 @@
+<ion-view title="Edit Transactions">
+    <ion-content padding="true" class="has-header">
+        
+        <form ng-submit=doEditTransactions();>
+              <div class="list">
+                   
+                    <label class="item item-select ancho">
+                        <span class="input-label">Type</span>
+                        <select selected="transactionData.type" ng-model="transactionData.type">
+                               <option selected="selected">{{transactionData.type}}</option>
+                                <option>Debit</option>
+                                <option>Credit</option>
+                        </select>
+                    </label>
+                    
+                    <label class="item item-select ancho">
+                        <span class="input-label">Status</span>
+                        <select  ng-model="transactionData.status">
+                               <option selected="selected">{{transactionData.status}}</option>
+                                <option>Active</option>
+                                <option>Inactive</option>
+                        </select>
+                    </label>
+                    
+                    <label class="item item-input">
+                          <span class="input-label">Rode</span>
+                          <input type="text" ng-model="transactionData.rode">
+                    </label>
+                    
+                    <label class="item item-input">
+                          <span class="input-label">Date</span>
+                          <input type="text" ng-model="transactionData.date">
+                    </label>
+                    
+                    <label class="item">
+                      <button class="button button-block button-positive" type="submit">Edit</button>
+                    </label>
+              </div>
+        </form>
+        
+    </ion-content>
+</ion-view>
